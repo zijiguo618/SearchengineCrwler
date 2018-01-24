@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/ -->
+<html data-useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/recaptcha__en.js"></script><script id="twitter-wjs" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/widgets.js"></script><script async="" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/analytics.js"></script><script src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/839281392784015" async=""></script><script async="" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/fbevents.js"></script><script async="" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/fbds.js"></script><script type="text/javascript">
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+<!--<![endif]-->
+
+
+<meta name="viewport" content="width=device-width">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/style.css" type="text/css" media="screen, projection">
+<!--[if lte IE 9]>
+	<link rel="stylesheet" href="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/lib/css/ie.css" type="text/css" media="screen" />
+<![endif]-->
+<link rel="pingback" href="https://threatpost.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/lib/js/html5.js" type="text/javascript"></script>
+
+<![endif]-->
+<link rel="icon" href="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/favicon.ico" type="image/x-icon">
+
+<title>Google reCaptcha Bypass Technique Uses Google’s Own Tools | Threatpost | The first stop for security news</title>
+<!-- JM Twitter Cards by Julien Maury 7.6.0 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@threatpost">
+<meta name="twitter:site" content="@threatpost">
+<meta name="twitter:title" content="Google reCaptcha Bypass Technique Uses Google’s Own Tools">
+<meta name="twitter:description" content="A proof of concept bypass of Google&#39;s CAPTCHA verification system uses Google&#39;s own web-based tools to pull off the skirting of the system.">
+<meta name="twitter:image" content="https://threatpost.com/files/2014/12/CAPTCHA-280x150.png">
+<!-- /JM Twitter Cards by Julien Maury 7.6.0 -->
+
+<!-- All in One SEO Pack 2.3.12.2.1 by Michael Torbert of Semper Fi Web Design[1125,1249] -->
+<meta name="description" content="A proof of concept bypass of Google&#39;s CAPTCHA verification system uses Google&#39;s own web-based tools to pull off the skirting of the system.">
+
+<meta name="keywords" content="captcha,completely automated procedures for telling computers and humans apart,east-ee security,github,google,google recaptcha v2,rebreakcaptcha,recaptcha v2">
+
+<link rel="canonical" href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/">
+<!-- /all in one seo pack -->
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Threatpost | The first stop for security news » Feed" href="https://threatpost.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Threatpost | The first stop for security news » Comments Feed" href="https://threatpost.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Threatpost | The first stop for security news » Google reCaptcha Bypass Technique Uses Google’s Own Tools Comments Feed" href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/feed/">
+<link rel="stylesheet" id="trending-authors-group-css" href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource" type="text/css" media="all">
+<script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var kss = {"twitter_account":"threatpost"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource(1)"></script>
+<link rel="https://api.w.org/" href="https://threatpost.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://threatpost.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://threatpost.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="CloudPets Notifies California AG of Data Breach" href="https://threatpost.com/cloudpets-notifies-california-ag-of-data-breach/124002/">
+<link rel="next" title="Yahoo Tells SEC Executives Failed to Act on Breach" href="https://threatpost.com/yahoo-tells-sec-executives-failed-to-act-on-breach/124017/">
+<link rel="shortlink" href="https://wp.me/p3AjUX-wg6">
+<link rel="alternate" type="application/json+oembed" href="https://threatpost.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthreatpost.com%2Fgoogle-recaptcha-bypass-technique-uses-googles-own-tools%2F124006%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://threatpost.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthreatpost.com%2Fgoogle-recaptcha-bypass-technique-uses-googles-own-tools%2F124006%2F&amp;format=xml">
+<script src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource(2)" type="text/javascript"></script><meta name="news_keywords" content="Google ReBreakCaptcha Bypass"><!-- Facebook Conversion Code for https://threatpost.com/ -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6037454883809', {'value':'0.00','currency':'RUB'}]);
+</script>
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6037454883809&amp;amp;cd[value]=0.00&amp;amp;cd[currency]=RUB&amp;amp;noscript=1" /&gt;</noscript><!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '839281392784015');
+	fbq('track', 'PageView');
+</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=839281392784015&amp;amp;ev=PageView&amp;amp;noscript=1" /&gt;</noscript>
+<!-- End Facebook Pixel Code -->
+                    <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-35676203-21', 'threatpost.com');
+                ga('set', 'anonymizeIp', true);
+                
+                                
+                    
+                                            
+                        ga('send', 'pageview', {
+                                                            'dimension1' : 'Tom Spring',
+                                                            'dimension2' : '124006',
+                                                            'dimension3' : '2017-03-02',
+                                                            'dimension4' : 'Cloud Security, Cryptography, Hacks, Web Security',
+                                                            'dimension5' : 'captcha, Completely Automated Procedures for Telling Computers and Humans Apart, East-Ee Security, github, google, Google reCaptcha v2, ReBreakCaptcha, reCaptcha v2',
+                                                    });
+
+                        
+                                                        
+                            
+                        
+                                                        
+                            
+                                            
+                                    
+                
+            </script>
+            
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<style type="text/css">img#wpstats{display:none}</style><meta name="google-site-verification" content="QqZgIj90Yu48EDqCQInft_Ze3RXSU9g_nWcWNIcUPxw">	<script>
+		jQuery(document).ready(function($){
+			// Setup the video popover
+			$(".video-pop").colorbox({inline:true});
+
+							$.featureList(
+					$("#post-tabs li a"),
+					$("#output li"), {
+						start_item:	0,
+						transition_interval: 9999999,
+						pause_on_hover: true,
+					}
+				);
+					});
+	</script>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google reCaptcha Bypass Technique Uses Google’s Own Tools">
+<meta property="og:url" content="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/">
+<meta property="og:description" content="A proof of concept bypass of Google’s CAPTCHA verification system uses Google’s own web-based tools to pull off the skirting of the system.">
+<meta property="article:published_time" content="2017-03-02T12:00:35+00:00">
+<meta property="article:modified_time" content="2017-03-11T22:39:13+00:00">
+<meta property="og:site_name" content="Threatpost | The first stop for security news">
+<meta property="og:image" content="https://threatpost.com/files/2014/12/CAPTCHA.png">
+<meta property="og:image:width" content="680">
+<meta property="og:image:height" content="509">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/images/site-icon.png" sizes="32x32">
+<link rel="icon" href="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/images/site-icon.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://trtpost-wpengine.netdna-ssl.com/wp-content/themes/threatpost/images/site-icon.png">
+<meta name="msapplication-TileImage" content="https://threatpost.com/wp-content/themes/threatpost/images/site-icon.png">
+			<link rel="stylesheet" type="text/css" id="wp-custom-css" href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource(3)">
+		
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/services.css"></head>
+
+<body class="post-template-default single single-post postid-124006 single-format-standard desktop gecko">
+		<div id="wrap" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+
+		
+		<h1 class="site-title"><a href="https://threatpost.com/" title="Threatpost | The first stop for security news" rel="home">Threatpost | The first stop for security news</a></h1>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="nav-menu"><li id="menu-item-37433" class="first-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37433"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Categories</a>
+<ul class="sub-menu">
+	<li id="menu-item-100087" class="category-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100087"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Category List</a>
+	<ul class="sub-menu">
+		<li id="menu-item-100092" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-100092"><a href="https://threatpost.com/category/cloud-security/">Cloud Security</a></li>
+		<li id="menu-item-100094" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100094"><a href="https://threatpost.com/category/critical-infrastructure/">Critical Infrastructure</a></li>
+		<li id="menu-item-100095" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-100095"><a href="https://threatpost.com/category/cryptography/">Cryptography</a></li>
+		<li id="menu-item-100096" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100096"><a href="https://threatpost.com/category/government/">Government</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100088" class="category-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100088"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Category List</a>
+	<ul class="sub-menu">
+		<li id="menu-item-100097" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-100097"><a href="https://threatpost.com/category/hacks/">Hacks</a></li>
+		<li id="menu-item-100098" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100098"><a href="https://threatpost.com/category/malware-2/">Malware</a></li>
+		<li id="menu-item-100100" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100100"><a href="https://threatpost.com/category/mobile-security/">Mobile Security</a></li>
+		<li id="menu-item-100101" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100101"><a href="https://threatpost.com/category/privacy/">Privacy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100089" class="category-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100089"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Category List</a>
+	<ul class="sub-menu">
+		<li id="menu-item-111019" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-111019"><a title="Security Analyst Summit" href="https://threatpost.com/category/sas/">SAS</a></li>
+		<li id="menu-item-100105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-100105"><a href="https://threatpost.com/category/vulnerabilities/">Vulnerabilities</a></li>
+		<li id="menu-item-100106" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-100106"><a href="https://threatpost.com/category/web-security/">Web Security</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100090" class="author-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100090"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Authors</a>
+	<ul class="sub-menu">
+		<li id="menu-item-100107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100107"><a href="http://threatpost.com/author/michael">Michael Mimoso</a></li>
+		<li id="menu-item-100108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100108"><a href="http://threatpost.com/author/christopher">Christopher Brook</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100113" class="additional-categories menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100113"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Additional Categories</a>
+	<ul class="sub-menu">
+		<li id="menu-item-101691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101691"><a href="https://threatpost.com/slide-shows">Slideshows</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100117" class="credit menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-100117"><a href="https://threatpost.com/">The Kaspersky Lab News Service</a></li>
+</ul>
+</li>
+<li id="menu-item-99719" class="featured-posts menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-99719"><a href="https://threatpost.com/category/featured/">Featured</a>
+<ul class="sub-menu">
+	<li id="menu-item-100119" class="author-list menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-100119"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#">Authors</a>
+	<ul class="sub-menu">
+		<li id="menu-item-100120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100120"><a href="http://threatpost.com/author/michael">Michael Mimoso</a></li>
+		<li id="menu-item-100121" class="last-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-100121"><a href="http://threatpost.com/author/christopher">Christopher Brook</a></li>
+	</ul>
+</li>
+	<li id="menu-item-100125" class="credit menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-100125"><a href="https://threatpost.com/">The Kaspersky Lab News Service</a></li>
+</ul>
+<div class="sub-menu"><div class="recent-posts"><div class="recent-posts-wrap">
+				<h2 class="alignleft">Featured Posts</h2>
+				<span class="alignright read-more button"><a href="https://threatpost.com/category/featured">All</a></span>
+				<div class="posts-wrap"><article id="post-125334" class="post"><a href="https://threatpost.com/fuze-patches-bug-that-exposed-recordings-of-private-business-meetings/125334/" title="Fuze Patches Bug That Exposed Recordings of Private Business Meetings"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/patches-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/fuze-patches-bug-that-exposed-recordings-of-private-business-meetings/125334/" title="Fuze Patches Bug That Exposed Recordings of Private Business Meetings">Fuze Patches Bug That Exposed Recordings… </a>
+					</article><article id="post-125322" class="post"><a href="https://threatpost.com/apple-revokes-certificate-used-by-osxdok-malware/125322/" title="Apple Revokes Certificate Used By OSX/Dok Malware"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/apple_patches-120x65.jpg" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/apple-revokes-certificate-used-by-osxdok-malware/125322/" title="Apple Revokes Certificate Used By OSX/Dok Malware">Apple Revokes Certificate Used By OSX/Dok… </a>
+					</article><article id="post-125316" class="last"><a href="https://threatpost.com/dan-geer-cybersecurity-humanitys-future-conjoined/125316/" title="Dan Geer: Cybersecurity, Humanity’s Future ‘Conjoined’"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/16107221024_f46f269705_z-120x65.jpg" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/dan-geer-cybersecurity-humanitys-future-conjoined/125316/" title="Dan Geer: Cybersecurity, Humanity’s Future ‘Conjoined’">Dan Geer: Cybersecurity, Humanity’s Future ‘Conjoined’</a>
+					</article> <div class="sep"></div></div><!-- .recent-posts --></div><!-- .recent-posts-wrap --></div></div></li>
+<li id="menu-item-99720" class="featured-other menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99720"><a href="https://threatpost.com/category/podcasts/">Podcasts</a><div class="sub-menu"><div class="recent-posts"><div class="recent-posts-wrap">
+				<h2 class="alignleft">Latest Podcasts</h2>
+				<span class="alignright read-more button"><a href="https://threatpost.com/category/podcasts">All</a></span>
+				<div class="posts-wrap"><article id="post-125286" class="post"><a href="https://threatpost.com/threatpost-news-wrap-april-21-2017-2/125286/" title="Threatpost News Wrap, April 28, 2017"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/tp_news_wrap_apr_28-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/threatpost-news-wrap-april-21-2017-2/125286/" title="Threatpost News Wrap, April 28, 2017">Threatpost News Wrap, April 28, 2017</a>
+					</article><article id="post-125127" class="post"><a href="https://threatpost.com/threatpost-news-wrap-april-21-2017/125127/" title="Threatpost News Wrap, April 21, 2017"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/april_21_newswrap-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/threatpost-news-wrap-april-21-2017/125127/" title="Threatpost News Wrap, April 21, 2017">Threatpost News Wrap, April 21, 2017</a>
+					</article><article id="post-124985" class="last"><a href="https://threatpost.com/threatpost-news-wrap-april-14-2017/124985/" title="Threatpost News Wrap, April 14, 2017"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/tp_news_wrap_apr14-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/threatpost-news-wrap-april-14-2017/124985/" title="Threatpost News Wrap, April 14, 2017">Threatpost News Wrap, April 14, 2017</a>
+					</article> <div class="sep"></div><article id="post-124614" class="post"><a href="https://threatpost.com/harley-geiger-on-cybersecurity-policy/124614/" title="Harley Geiger on Cybersecurity Policy"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/harley_geiger_policy-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/harley-geiger-on-cybersecurity-policy/124614/" title="Harley Geiger on Cybersecurity Policy">Harley Geiger on Cybersecurity Policy</a>
+					</article><article id="post-124555" class="post"><a href="https://threatpost.com/threatpost-news-wrap-march-27-2017/124555/" title="Threatpost News Wrap, March 27, 2017"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/threatpost_news_wrap_3_27-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/threatpost-news-wrap-march-27-2017/124555/" title="Threatpost News Wrap, March 27, 2017">Threatpost News Wrap, March 27, 2017</a>
+					</article><article id="post-124409" class="last"><a href="https://threatpost.com/jon-oberheide-on-perimeter-security/124409/" title="Jon Oberheide on Perimeter Security"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Duo-Jon-Oberheide-120x65.jpg" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/jon-oberheide-on-perimeter-security/124409/" title="Jon Oberheide on Perimeter Security">Jon Oberheide on Perimeter Security</a>
+					</article></div><!-- .recent-posts --></div><!-- .recent-posts-wrap --></div>
+			<div class="recent-posts-list">
+			<h2 class="alignleft">Recommended</h2></div>
+			<div class="credit"><a href="https://threatpost.com/">The Kaspersky Lab Security News Service</a></div></div></li>
+<li id="menu-item-99721" class="featured-other menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99721"><a href="https://threatpost.com/category/videos/">Videos</a><div class="sub-menu"><div class="recent-posts"><div class="recent-posts-wrap">
+				<h2 class="alignleft">Latest Videos</h2>
+				<span class="alignright read-more button"><a href="https://threatpost.com/category/videos">All</a></span>
+				<div class="posts-wrap"><article id="post-122033" class="post"><a href="https://threatpost.com/ios-10-passcode-bypass-can-access-photos-contacts/122033/" title="iOS 10 Passcode Bypass Can Access Photos, Contacts"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/ios_7_passcode-120x65.jpg" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/ios-10-passcode-bypass-can-access-photos-contacts/122033/" title="iOS 10 Passcode Bypass Can Access Photos, Contacts">iOS 10 Passcode Bypass Can Access… </a>
+					</article><article id="post-120230" class="post"><a href="https://threatpost.com/bashlite-family-of-malware-infects-1-million-iot-devices/120230/" title="BASHLITE Family Of Malware Infects 1 Million IoT Devices"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/iot-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/bashlite-family-of-malware-infects-1-million-iot-devices/120230/" title="BASHLITE Family Of Malware Infects 1 Million IoT Devices">BASHLITE Family Of Malware Infects 1… </a>
+					</article><article id="post-120221" class="last"><a href="https://threatpost.com/how-to-leak-data-from-air-gapped-computers-with-a-usb-device/120221/" title="How to Leak Data From Air-Gapped Computers With a USB Device"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/bengurion_usb_data_exfiltration-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/how-to-leak-data-from-air-gapped-computers-with-a-usb-device/120221/" title="How to Leak Data From Air-Gapped Computers With a USB Device">How to Leak Data From Air-Gapped… </a>
+					</article> <div class="sep"></div><article id="post-116946" class="post"><a href="https://threatpost.com/bruce-schneier-on-the-integration-of-privacy-and-security/116946/" title="Bruce Schneier on the Integration of Privacy and Security"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/bruce_schneier-120x65.jpg" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/bruce-schneier-on-the-integration-of-privacy-and-security/116946/" title="Bruce Schneier on the Integration of Privacy and Security">Bruce Schneier on the Integration of… </a>
+					</article><article id="post-116763" class="post"><a href="https://threatpost.com/chris-valasek-talks-car-hacking-and-more/116763/" title="Chris Valasek Talks Car Hacking, IoT, at RSA"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/valasek-120x65.jpg" class="latest-post wp-post-image" alt="Chris Valasek" scale="0"></a>
+					<a href="https://threatpost.com/chris-valasek-talks-car-hacking-and-more/116763/" title="Chris Valasek Talks Car Hacking, IoT, at RSA">Chris Valasek Talks Car Hacking, IoT,… </a>
+					</article><article id="post-116746" class="last"><a href="https://threatpost.com/patrick-wardle-on-os-x-malware-with-a-possible-hacking-team-connection/116746/" title="Patrick Wardle on OS X Malware With a Possible Hacking Team Connection"><img width="120" height="65" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/patrick_wardle-120x65.png" class="latest-post wp-post-image" alt="" scale="0"></a>
+					<a href="https://threatpost.com/patrick-wardle-on-os-x-malware-with-a-possible-hacking-team-connection/116746/" title="Patrick Wardle on OS X Malware With a Possible Hacking Team Connection">Patrick Wardle on OS X Malware… </a>
+					</article></div><!-- .recent-posts --></div><!-- .recent-posts-wrap --></div>
+			<div class="recent-posts-list">
+			<h2 class="alignleft">Recommended</h2></div>
+			<div class="credit"><a href="https://threatpost.com/">The Kaspersky Lab Security News Service</a></div></div></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+		<div class="sidebar-search">
+			
+<form role="search" method="get" id="searchform" action="https://threatpost.com/">
+    <div>
+        <input type="text" value="" name="s" id="s">
+        <input type="submit" id="searchsubmit" value="Search">
+    </div>
+</form>		</div><!-- .sidebar-search -->
+
+		
+		<div id="graybox">
+							<div id="header-sidebar" class="aligncenter" role="complementary">
+					<aside id="threatpost_social-2" class="widget threatpost_social widget_text">
+    <div class="social-links alignleft">
+      <ul id="social-header">
+        <li><a href="http://twitter.com/threatpost/" class="twitter" target="blank">Twitter</a></li><li><a href="http://www.facebook.com/Threatpost/" class="facebook" target="blank">Facebook</a></li><li><a href="https://plus.google.com/103973344735603121561/posts" class="google" target="blank">Google</a></li><li><a href="http://www.linkedin.com/groups?gid=1843931" class="linkedin" target="blank">LinkedIn</a></li><li><a href="http://www.youtube.com/user/threatpost" class="youtube" target="blank">YouTube</a></li><li><a href="http://threatpost.com/feed" class="rss" target="blank">RSS</a></li>      </ul>
+    </div><!-- .social-links -->
+
+    </aside><aside id="threatpost_tweets-3" class="widget threatpost_tweets widget_text"></aside><aside id="threatpost_flags-2" class="widget threatpost_flags widget_text">
+    <div class="flags alignright">
+      <ul id="flag-list">
+<li class="us-uk"><a href="http://threatpost.com/"><img class="en" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/english.png" alt="Blog in English" title=" Blog in English " scale="0"></a></li>
+<li class="russia"><a href="http://threatpost.ru/"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/russia.png" alt="Блог на русском" title="Блог на русском" scale="0"></a></li>
+</ul>    </div><!-- .flags -->
+
+    </aside>				</div><!-- #header-sidebar -->
+					</div><!-- #graybox -->
+	</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="content-sidebar-wrap" class="site-content">
+		<div id="breadcrumbs"><a href="https://threatpost.com/">Welcome</a> <span class="sep">&gt;</span> <a href="https://threatpost.com/blog">Blog Home</a><span class="sep">&gt;</span><a href="https://threatpost.com/category/cloud-security/">Cloud Security</a> <span class="sep">&gt;</span> <span class="current">Google reCaptcha Bypass Technique Uses Google’s Own Tools</span></div>		<div id="content" role="main">
+
+			<div class="socialfloat"><div class="social-likes social-likes_notext social-likes_visible social-likes_ready" data-title="Google reCaptcha Bypass Technique Uses Google’s Own Tools" data-url="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/" data-counters="yes" data-zeroes="yes"><div class="social-likes__widget social-likes__widget_facebook" title="Share via Facebook"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span></span><span class="social-likes__counter social-likes__counter_facebook">137</span></div>
+<div class="social-likes__widget social-likes__widget_plusone" title="Share via Google"><span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span></span><span class="social-likes__counter social-likes__counter_plusone">15</span></div>
+<div class="social-likes__widget social-likes__widget_linkedin" title="Share via LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span></span><span class="social-likes__counter social-likes__counter_linkedin">0</span></div>
+<div class="social-likes__widget social-likes__widget_reddit" title="Share via Reddit"><span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span></span><span class="social-likes__counter social-likes__counter_reddit">0</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Share via Twitter"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span></span><span class="social-likes__counter social-likes__counter_twitter">0</span></div><div class="social-likes__widget social-likes__widget_comments"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#respond"><span class="social-likes__button social-likes__button_comments"><span class="social-likes__icon social-likes__icon_comments"></span></span><span class="social-likes__counter social-likes__counter_comments">0</span></a></div></div></div>
+	<article id="post-124006" class="post-124006 post type-post status-publish format-standard has-post-thumbnail hentry category-cloud-security category-cryptography category-hacks category-web-security tag-captcha tag-completely-automated-procedures-for-telling-computers-and-humans-apart tag-east-ee-security tag-github tag-google tag-google-recaptcha-v2 tag-rebreakcaptcha tag-recaptcha-v2" itemscope="" itemtype="http://schema.org/BlogPosting">
+				<header class="entry-header">
+												<div class="featured-image-wrap">
+						<a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/" itemprop="url" title="Google reCaptcha Bypass Technique Uses Google’s Own Tools"><img width="680" height="400" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/CAPTCHA-680x400.png" class="attachment-single-featured size-single-featured wp-post-image" alt="" itemprop="image" scale="0"></a><h1 class="entry-title" itemprop="name">Google reCaptcha Bypass Technique Uses Google’s Own Tools</h1>					</div>
+								<div class="post-info">
+					<span class="author alignleft">by <span itemprop="author"><a href="https://threatpost.com/author/thomas/" title="Posts by Tom Spring" rel="author">Tom Spring</a></span>
+					</span>					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<span class="date alignright"><time itemprop="datePublished" datetime="2017-03-02">March 2, 2017 , 7:00 am</time></span>
+				</div>
+					</header><!-- .entry-header -->
+
+		<div class="entry-content" itemprop="articleBody"><p>A proof of concept bypass of Google’s reCaptcha V2 verification system, posted online Tuesday, uses Google’s own web-based tools to pull off the skirting of the system.</p>
+<p>The tool dubbed ReBreakCaptcha “lets you easily bypass Google’s reCaptcha v2 anywhere on the web,” according to the author of the tool that is only identified as East-Ee Security.</p><div class="related-posts-inner"><h3>Related Posts</h3>					<article id="post-125414" class="secondary-post  post-125414 post type-post status-publish format-standard has-post-thumbnail hentry category-web-security tag-authentication tag-google tag-google-docs-phishing tag-oauth2 tag-phishing">
+						<h4 class="entry-title">
+							<a href="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/" title="Permalink to Google Shuts Down Docs Phishing Spree" rel="bookmark">Google Shuts Down Docs Phishing Spree</a>
+						</h4>
+						<div class="post-info">
+							<span class="date">May 3, 2017 , 6:28 pm</span>
+						</div>
+					</article><!-- #post -->
+								<article id="post-125255" class="secondary-post  post-125255 post type-post status-publish format-standard has-post-thumbnail hentry category-web-security tag-browser-warnings tag-chrome tag-emily-schechter tag-google tag-http tag-https tag-lets-encrypt tag-ssl tag-tls tag-web-security-2">
+						<h4 class="entry-title">
+							<a href="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/" title="Permalink to Chrome to Mark More HTTP Pages ‘Not Secure’" rel="bookmark">Chrome to Mark More HTTP Pages ‘Not Secure’</a>
+						</h4>
+						<div class="post-info">
+							<span class="date">April 27, 2017 , 2:27 pm</span>
+						</div>
+					</article><!-- #post -->
+								<article id="post-125117" class="secondary-post last post-125117 post type-post status-publish format-standard has-post-thumbnail hentry category-government category-privacy tag-cross-border-request-for-data tag-google tag-google-transparency-report tag-governments tag-mlat tag-mutual-legal-assistance-treaty tag-national-security-letter tag-nsl tag-privacy tag-requests-for-user-information tag-surveillance">
+						<h4 class="entry-title">
+							<a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" title="Permalink to Google Pleads for Better Cross-Border Exchange of Digital Evidence" rel="bookmark">Google Pleads for Better Cross-Border Exchange of Digital Evidence</a>
+						</h4>
+						<div class="post-info">
+							<span class="date">April 21, 2017 , 10:30 am</span>
+						</div>
+					</article><!-- #post -->
+			</div>
+<p>Google rolled out reCaptcha in 2014 to most of its public services in an effort defeat bots and scripts that can speedily register hundreds of free web-service accounts at a time. CAPTCHA stands for Completely Automated Public Turing test to tell Computers and Humans Apart. ReCaptcha is Google’s name for its own technology and service that today uses image, audio or text challenges to verify a human is signing into an account.</p>
+<p>East-Ee Security’s <a href="https://east-ee.com/2017/02/28/rebreakcaptcha-breaking-googles-recaptcha-v2-using-google/">ReBreakCaptcha method</a> is able to defeat reCaptcha V2 security via a script &nbsp;that uses Google’s own APIs to capture audio challenges as sound files. Then it uses speech-to-text technology to convert audio into text answers that are then inputted as text-based solutions to audio-based challenges used in reCaptcha V2.</p>
+<p><a href="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Threatpost_-reCaptcha-V2_Audio_challenge2.png"><img class="alignnone wp-image-124007 size-full" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Threatpost_-reCaptcha-V2_Audio_challenge2.png" width="512" height="86" scale="0"></a></p>
+<p>To pull this off, first East-Ee Security devised a way to only access audio reCaptcha challenges. That’s not too difficult because every challenge includes a link, in the form of a tiny pair of headphones, that indicates an audio challenge request is available, according to the author.</p>
+<p>“Some of you may notice that instead of an audio challenge, sometimes you get a text challenge,” the researcher writes. “To bypass it and get an audio challenge, you simply click the ‘Reload Challenge’ button until you get the correct type.”</p>
+<p>Once the audio challenge is presented reCaptcha allows you to either play the audio file from the webpage or download it.</p>
+<p><a href="https://trtpost-wpengine.netdna-ssl.com/files/2017/03/Threatpost_-reCaptcha-V2_Audio_challenge.png"><img class="alignright wp-image-124008 size-medium" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Threatpost_-reCaptcha-V2_Audio_challenge-300x248.png" width="300" height="248" scale="0"></a>“Let’s download the audio file and send it to Google Speech Recognition API. Before doing so, we will convert it to a ‘wav’ format, which is requested by Google’s Speech Recognition API. Now we have the audio challenge file and are ready to send it to Google Speech Recognition. How can this be done? Using (Google’s own) API,” the author wrote.</p>
+<p>Next, the author writes, “We will send the ‘wav’ audio file and the Speech Recognition will send us back the result in a string (e.g. ‘25143’). This result will be the solution to our audio challenge,” East-Ee Security explains.</p>
+<p>The author of the post posted a <a href="https://github.com/eastee/rebreakcaptcha">proof of concept script using Python</a> on GitHub. “It utilizes all of the presented stages of the technique for a fully-automated bypass of ReCaptcha v2.”</p>
+<p>Neither Google nor East-Ee Security replied to requests for comment.</p>
+<p>Threatpost did reach out to a number of software developers that confirmed the proof of concept script worked, but only when their tests were from a public IP address.</p>
+<p>This is also not the first time Google’s reCaptcha service has been bypassed. Last year, at Black Hat Asia, security researchers from Columbia University published a paper <em><a href="https://www.blackhat.com/docs/asia-16/materials/asia-16-Sivakorn-Im-Not-a-Human-Breaking-the-Google-reCAPTCHA-wp.pdf">I’m not a human: Breaking the Google reCAPTCHA</a></em> (PDF).</p>
+<p>That research was based on bypassing the Google reCaptcha V2’s security checks for detecting suspicious browser attributes or behavior. It also based its bypass technique on identifying and predicting images used in reCaptcha. According the paper’s authors, their technique automatically solved 70.78 percent of the image reCaptcha challenges, while requiring only 19 seconds per challenge.</p>
+<p>East-Ee Security did not provide any comparable data for its ReBreakCaptcha bypass.</p>
+<p></p></div><!-- .entry-content -->
+		<footer class="entry-meta clear">
+								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+<div class="narrow"><div class="social-likes social-likes_notext social-likes_visible social-likes_ready" data-title="Google reCaptcha Bypass Technique Uses Google’s Own Tools" data-url="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/" data-counters="yes" data-zeroes="yes"><div class="social-likes__widget social-likes__widget_facebook" title="Share via Facebook"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span></span><span class="social-likes__counter social-likes__counter_facebook">137</span></div>
+<div class="social-likes__widget social-likes__widget_plusone" title="Share via Google"><span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span></span><span class="social-likes__counter social-likes__counter_plusone">15</span></div>
+<div class="social-likes__widget social-likes__widget_linkedin" title="Share via LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span></span><span class="social-likes__counter social-likes__counter_linkedin">0</span></div>
+<div class="social-likes__widget social-likes__widget_reddit" title="Share via Reddit"><span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span></span><span class="social-likes__counter social-likes__counter_reddit">0</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Share via Twitter"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span></span><span class="social-likes__counter social-likes__counter_twitter">0</span></div><div class="social-likes__widget social-likes__widget_comments"><a href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#respond"><span class="social-likes__button social-likes__button_comments"><span class="social-likes__icon social-likes__icon_comments"></span></span><span class="social-likes__counter social-likes__counter_comments">0</span></a></div></div></div><span class="categories alignright">Categories:  <a href="https://threatpost.com/category/cloud-security/" title="View all posts in Cloud Security">Cloud Security</a>,  <a href="https://threatpost.com/category/cryptography/" title="View all posts in Cryptography">Cryptography</a>,  <a href="https://threatpost.com/category/hacks/" title="View all posts in Hacks">Hacks</a>,  <a href="https://threatpost.com/category/web-security/" title="View all posts in Web Security">Web Security</a></span><!-- .categories -->
+<div id="comments" class="comments-area">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave A Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://threatpost.com/google-recaptcha-bypass-technique-uses-googles-own-tools/124006/#respond" style="display:none;">Cancel Reply</a></small></h3>			<form action="https://threatpost.com/wp-comments-post.php?wpe-comment-post=kasperskyhub" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes">Your email address will not be published. Required fields are marked *</p><p class="comment-form-comment"><label for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30"></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="text" value="" size="30"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="124006" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0097f1b2d3"></p><!-- the following input field has been added by the Honeypot Comments plugin to thwart spambots -->
+	<input type="hidden" id="WsnIrhO2exF8VVJqsK0snJK19" name="Tg9USk0C4KlajM5sOzWWzywgO"><div class="g-recaptcha" data-sitekey="6Lfgf_8SAAAAADYbQAnKFOk7cvnWbkqo6y57-4-U" data-theme="standard"><div style="width: 304px; height: 78px;"><div><iframe src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/anchor.html" title="recaptcha widget" width="304" height="78" frameborder="0" scrolling="no" name="undefined"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div><script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/api.js"></script>            <div id="recaptcha-submit-btn-area">&nbsp;</div>
+            <noscript>
+            &lt;style type='text/css'&gt;#form-submit-save {display:none;}&lt;/style&gt;
+            &lt;input name="submit" type="submit" id="submit-alt" tabindex="6"
+                value="Submit Comment"/&gt;
+            </noscript><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1493867303860"></form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments .comments-area --><div class="related-posts"><h2>Recommended Reads</h2>			<article id="post-125414" class="secondary-post  post-125414 post type-post status-publish format-standard has-post-thumbnail hentry category-web-security tag-authentication tag-google tag-google-docs-phishing tag-oauth2 tag-phishing">
+					<div class="image-wrap">
+						<a href="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/" title="Google Shuts Down Docs Phishing Spree"><img width="180" height="140" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/gmailsecurituy-180x140.jpg" class="home-left wp-post-image" alt="" scale="0"></a>						<div class="social-likes social-likes_notext social-likes_visible social-likes_ready" data-title="Google Shuts Down Docs Phishing Spree" data-url="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/" data-counters="yes" data-zeroes="yes"><div class="social-likes__widget social-likes__widget_facebook" title="Share via Facebook"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span></span><span class="social-likes__counter social-likes__counter_facebook">61</span></div>
+<div class="social-likes__widget social-likes__widget_plusone" title="Share via Google"><span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span></span><span class="social-likes__counter social-likes__counter_plusone">7</span></div>
+<div class="social-likes__widget social-likes__widget_linkedin" title="Share via LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span></span><span class="social-likes__counter social-likes__counter_linkedin">0</span></div>
+<div class="social-likes__widget social-likes__widget_reddit" title="Share via Reddit"><span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span></span><span class="social-likes__counter social-likes__counter_reddit">0</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Share via Twitter"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span></span><span class="social-likes__counter social-likes__counter_twitter">0</span></div><div class="social-likes__widget social-likes__widget_comments"><a href="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/#respond"><span class="social-likes__button social-likes__button_comments"><span class="social-likes__icon social-likes__icon_comments"></span></span><span class="social-likes__counter social-likes__counter_comments">0</span></a></div></div>					</div>
+					<div class="post-info">
+						<span class="date">May 3, 2017 , 6:28 pm</span>
+						<div class="categories alignright">
+							<span class="categories alignleft">Categories:  <a href="https://threatpost.com/category/web-security/" title="View all posts in Web Security">Web Security</a></span><!-- .categories -->						</div>
+					</div>
+					<h3 class="entry-title">
+						<a href="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/" title="Permalink to Google Shuts Down Docs Phishing Spree" rel="bookmark">Google Shuts Down Docs Phishing Spree</a>
+					</h3>
+					<div class="post-info">
+						<span class="author">by <a href="https://threatpost.com/author/michael/" title="Posts by Michael Mimoso" rel="author">Michael Mimoso</a></span>
+					</div>
+					<p>Google has removed offending accounts involved in a widespread phishing attack today impersonating Google Docs. </p>
+					<p class="alignright"><a href="https://threatpost.com/google-shuts-down-docs-phishing-spree/125414/" title="Permalink to Google Shuts Down Docs Phishing Spree" rel="bookmark" class="read-more">Read more...</a></p>
+				</article><!-- #post -->
+					<article id="post-125255" class="secondary-post  post-125255 post type-post status-publish format-standard has-post-thumbnail hentry category-web-security tag-browser-warnings tag-chrome tag-emily-schechter tag-google tag-http tag-https tag-lets-encrypt tag-ssl tag-tls tag-web-security-2">
+					<div class="image-wrap">
+						<a href="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/" title="Chrome to Mark More HTTP Pages ‘Not Secure’"><img width="180" height="140" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/chromehowto-180x140.jpg" class="home-left wp-post-image" alt="google chrome security update" scale="0"></a>						<div class="social-likes social-likes_notext social-likes_visible social-likes_ready" data-title="Chrome to Mark More HTTP Pages ‘Not Secure’" data-url="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/" data-counters="yes" data-zeroes="yes"><div class="social-likes__widget social-likes__widget_facebook" title="Share via Facebook"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span></span><span class="social-likes__counter social-likes__counter_facebook">70</span></div>
+<div class="social-likes__widget social-likes__widget_plusone" title="Share via Google"><span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span></span><span class="social-likes__counter social-likes__counter_plusone">8</span></div>
+<div class="social-likes__widget social-likes__widget_linkedin" title="Share via LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span></span><span class="social-likes__counter social-likes__counter_linkedin">0</span></div>
+<div class="social-likes__widget social-likes__widget_reddit" title="Share via Reddit"><span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span></span><span class="social-likes__counter social-likes__counter_reddit">0</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Share via Twitter"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span></span><span class="social-likes__counter social-likes__counter_twitter">0</span></div><div class="social-likes__widget social-likes__widget_comments"><a href="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/#comments"><span class="social-likes__button social-likes__button_comments"><span class="social-likes__icon social-likes__icon_comments"></span></span><span class="social-likes__counter social-likes__counter_comments">1</span></a></div></div>					</div>
+					<div class="post-info">
+						<span class="date">April 27, 2017 , 2:27 pm</span>
+						<div class="categories alignright">
+							<span class="categories alignleft">Categories:  <a href="https://threatpost.com/category/web-security/" title="View all posts in Web Security">Web Security</a></span><!-- .categories -->						</div>
+					</div>
+					<h3 class="entry-title">
+						<a href="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/" title="Permalink to Chrome to Mark More HTTP Pages ‘Not Secure’" rel="bookmark">Chrome to Mark More HTTP Pages ‘Not Secure’</a>
+					</h3>
+					<div class="post-info">
+						<span class="author">by <a href="https://threatpost.com/author/michael/" title="Posts by Michael Mimoso" rel="author">Michael Mimoso</a></span>
+					</div>
+					<p>Starting with Chrome 62, Google will start marking any HTTP page where users may enter data, and any HTTP page visited in incognito mode</p>
+					<p class="alignright"><a href="https://threatpost.com/chrome-to-mark-more-http-pages-not-secure/125255/" title="Permalink to Chrome to Mark More HTTP Pages ‘Not Secure’" rel="bookmark" class="read-more">Read more...</a></p>
+				</article><!-- #post -->
+					<article id="post-125117" class="secondary-post last post-125117 post type-post status-publish format-standard has-post-thumbnail hentry category-government category-privacy tag-cross-border-request-for-data tag-google tag-google-transparency-report tag-governments tag-mlat tag-mutual-legal-assistance-treaty tag-national-security-letter tag-nsl tag-privacy tag-requests-for-user-information tag-surveillance">
+					<div class="image-wrap">
+						<a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" title="Google Pleads for Better Cross-Border Exchange of Digital Evidence"><img width="180" height="140" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Google2-180x140.jpg" class="home-left wp-post-image" alt="" scale="0"></a>						<div class="social-likes social-likes_notext social-likes_visible social-likes_ready" data-title="Google Pleads for Better Cross-Border Exchange of Digital Evidence" data-url="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" data-counters="yes" data-zeroes="yes"><div class="social-likes__widget social-likes__widget_facebook" title="Share via Facebook"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span></span><span class="social-likes__counter social-likes__counter_facebook">22</span></div>
+<div class="social-likes__widget social-likes__widget_plusone" title="Share via Google"><span class="social-likes__button social-likes__button_plusone"><span class="social-likes__icon social-likes__icon_plusone"></span></span><span class="social-likes__counter social-likes__counter_plusone">7</span></div>
+<div class="social-likes__widget social-likes__widget_linkedin" title="Share via LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span></span><span class="social-likes__counter social-likes__counter_linkedin">0</span></div>
+<div class="social-likes__widget social-likes__widget_reddit" title="Share via Reddit"><span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span></span><span class="social-likes__counter social-likes__counter_reddit">0</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Share via Twitter"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span></span><span class="social-likes__counter social-likes__counter_twitter">0</span></div><div class="social-likes__widget social-likes__widget_comments"><a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/#respond"><span class="social-likes__button social-likes__button_comments"><span class="social-likes__icon social-likes__icon_comments"></span></span><span class="social-likes__counter social-likes__counter_comments">0</span></a></div></div>					</div>
+					<div class="post-info">
+						<span class="date">April 21, 2017 , 10:30 am</span>
+						<div class="categories alignright">
+							<span class="categories alignleft">Categories:  <a href="https://threatpost.com/category/government/" title="View all posts in Government">Government</a>,  <a href="https://threatpost.com/category/privacy/" title="View all posts in Privacy">Privacy</a></span><!-- .categories -->						</div>
+					</div>
+					<h3 class="entry-title">
+						<a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" title="Permalink to Google Pleads for Better Cross-Border Exchange of Digital Evidence" rel="bookmark">Google Pleads for Better Cross-Border Exchange of Digital Evidence</a>
+					</h3>
+					<div class="post-info">
+						<span class="author">by <a href="https://threatpost.com/author/michael/" title="Posts by Michael Mimoso" rel="author">Michael Mimoso</a></span>
+					</div>
+					<p>Google asked for MLAT reform, and released its biannual Transparency Report revealing it received a record number of government requests for user data.</p>
+					<p class="alignright"><a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" title="Permalink to Google Pleads for Better Cross-Border Exchange of Digital Evidence" rel="bookmark" class="read-more">Read more...</a></p>
+				</article><!-- #post -->
+		</div>
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+	<div id="secondary" class="widget-area" role="complementary">
+		<aside id="ithemesrotatingimages-3" class="widget widget_ithemesrotatingimages">
+		<script type="text/javascript">
+			/* <![CDATA[ */
+				jQuery(document).ready(
+					function() {
+						yo = jQuery('#rotating-images-rotator_1').crossSlide(
+							{
+							sleep: 2,
+							fade: 1, open_new_window: true},
+							[
+								{src: 'https://threatpost.com/wp-content/blogs.dir/31/files/2017/04/lazarus_270x450.jpg', href: 'https://securelist.com/blog/sas/77908/lazarus-under-the-hood/?utm_medium=blg&utm_source=us_tp_b_170405', dir: 'down'},
+{src: 'https://threatpost.com/wp-content/blogs.dir/31/files/2017/04/moonlight_maze_270x450.jpg', href: 'https://securelist.com/blog/sas/77883/penquins-moonlit-maze/?utm_medium=blg&utm_source=us_tp_b_170405', dir: 'up'},
+{src: 'https://threatpost.com/wp-content/blogs.dir/31/files/2017/04/Banner_Threatpost_Ransomware.png', href: 'https://go.kaspersky.com/Ransomware-eBookSOC.html?utm_source=smm_kb&utm_medium=ww_kb_o_170327', dir: 'down'},
+{src: 'https://threatpost.com/wp-content/blogs.dir/31/files/2017/04/Banner_Threatpost_ATM-3.png', href: 'https://go.kaspersky.com/Ransomware-eBookSOC.html?utm_source=smm_kb&utm_medium=ww_kb_o_170327', dir: 'up'}
+							]
+						);
+					}
+				);
+			/* ]]> */
+		</script>
+	
+		<style type="text/css">#rotating-images-rotator_1,#rotating-images-rotator-wrapper_1 {	width: 270px;	height: 450px;}#rotating-images-rotator-wrapper_1 img {	padding: 0px;}#rotating-images-rotator-container_1 .rotating-images-link-overlay_1 {	height: 450px;	width: 270px;	position: absolute;	top: 0;	display: block; } #rotating-images-rotator-container_1 .rotating-images-link_1 {	text-decoration: none;}#rotating-images-rotator-container_1 .rotating-images-title-overlay_1 { 	width: 250px;	position: absolute;	top: 0;
+;	text-align: center;	padding: 10px;	display: block;}#rotating-images-rotator-container_1 .rotating-images-title-overlay-header_1,#rotating-images-rotator-container_1 .rotating-images-title-overlay-subheader_1 {width: 100%;}#rotating-images-rotator-container_1 .rotating-images-title-overlay-header_1 {	padding-bottom: 10px;}#rotating-images-rotator-container_1 .rotating-images-title-overlay-header_1 a {	color: #FFFFFF;	font-size: 36px;	line-height: 1;}#rotating-images-rotator-container_1 .rotating-images-title-overlay-subheader_1 a {	color: #FFFFFF;	font-size: 18px;	line-height: 1;}</style><div id="rotating-images-rotator-wrapper_1" style="position:relative;">	<div id="rotating-images-rotator-container_1" style="position:relative;">		<div id="rotating-images-rotator_1" style="overflow: hidden; padding: 0px; position: relative;"><a href="https://securelist.com/blog/sas/77908/lazarus-under-the-hood/?utm_medium=blg&amp;utm_source=us_tp_b_170405" target="_new"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/lazarus_270x450.jpg" style="position: absolute; visibility: visible; top: 0px; left: 0px; border: 0px;" scale="0"></a><a href="https://securelist.com/blog/sas/77883/penquins-moonlit-maze/?utm_medium=blg&amp;utm_source=us_tp_b_170405" target="_new"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/moonlight_maze_270x450.jpg" style="position: absolute; visibility: hidden; top: 0px; left: 0px; border: 0px; opacity: 1;" scale="0"></a><a href="https://go.kaspersky.com/Ransomware-eBookSOC.html?utm_source=smm_kb&amp;utm_medium=ww_kb_o_170327" target="_new"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Banner_Threatpost_Ransomware.png" style="position: absolute; visibility: hidden; top: 0px; left: 0px; border: 0px; opacity: 1;" scale="0"></a><a href="https://go.kaspersky.com/Ransomware-eBookSOC.html?utm_source=smm_kb&amp;utm_medium=ww_kb_o_170327" target="_new"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/Banner_Threatpost_ATM-3.png" style="position: absolute; visibility: hidden; top: 0px; left: 0px; border: 0px; opacity: 0;" scale="0"></a></div>			<a href="https://securelist.com/blog/sas/77908/lazarus-under-the-hood/?utm_medium=blg&amp;utm_source=us_tp_b_170405" class="rotating-images-link_1" target="_blank">				<!-- filler content -->			</a></div></div></aside><aside id="threatpost_top_stories-2" class="widget threatpost_top_stories widget_text"><div class="more-posts"><h2 class="widget-title alignleft">Top Stories</h2>        <article id="post-125196" class="home-left  post-125196 post type-post status-publish format-standard has-post-thumbnail hentry category-vulnerabilities tag-adobe tag-adobe-hotfix tag-cross-site-scripting-1 tag-java-deserialization tag-patch tag-vulnerabilities-2 tag-xss">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/coldfusion-hotfix-resolves-xss-java-deserialization-bugs/125196/" title="Permalink to ColdFusion Hotfix Resolves XSS, Java Deserialization Bugs" rel="bookmark">ColdFusion Hotfix Resolves XSS, Java Deserialization Bugs</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 25, 2017 , 12:36 pm</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125250" class="home-left  post-125250 post type-post status-publish format-standard has-post-thumbnail hentry category-hacks category-iot category-vulnerabilities tag-bug-bounties tag-cia tag-iot-security tag-keren-elazari tag-nsa tag-security-research tag-source-boston tag-vulnerabilities-2">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/the-time-has-arrived-to-embrace-hackers/125250/" title="Permalink to The Time Has Arrived to Embrace Hackers" rel="bookmark">The Time Has Arrived to Embrace Hackers</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 27, 2017 , 11:47 am</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125190" class="home-left  post-125190 post type-post status-publish format-standard has-post-thumbnail hentry category-mobile-security category-vulnerabilities tag-android-patches tag-android-security-bulletin tag-android-vulnerabilities tag-elevation-of-privileges tag-kernel-driver-exploits-nividia-kernel-driver-exploit tag-mobile-security-2 tag-msm-video-driver-exploit tag-nicolas-trippar tag-vulnerabilities-2 tag-zimperium tag-zimperium-n-days-exploit-acquisition-program">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/zimperium-acquisition-program-publishes-exploits-for-patched-android-bugs/125190/" title="Permalink to Zimperium Acquisition Program Publishes Exploits for Patched Android Bugs" rel="bookmark">Zimperium Acquisition Program Publishes Exploits for Patched Android Bugs</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 25, 2017 , 10:30 am</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125242" class="home-left  post-125242 post type-post status-publish format-standard has-post-thumbnail hentry category-hacks category-vulnerabilities category-web-security tag-cfi tag-control-flow-integrity tag-coop-attack tag-counterfeit-object-oriented-programming tag-exploit-kit tag-ha-cfi tag-ieee tag-javascript tag-microsoft tag-microsoft-edge-browser tag-return-oriented-programming-attack tag-rop-attack tag-theoretical-attack-technique tag-windows-10 tag-windows-10-anniversary-update tag-windows-8-1">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/attack-method-highlights-weaknesses-in-microsoft-cfg/125242/" title="Permalink to Attack Method Highlights Weaknesses in Microsoft CFG" rel="bookmark">Attack Method Highlights Weaknesses in Microsoft CFG</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 27, 2017 , 10:02 am</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125117" class="home-left  post-125117 post type-post status-publish format-standard has-post-thumbnail hentry category-government category-privacy tag-cross-border-request-for-data tag-google tag-google-transparency-report tag-governments tag-mlat tag-mutual-legal-assistance-treaty tag-national-security-letter tag-nsl tag-privacy tag-requests-for-user-information tag-surveillance">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/google-pleas-for-better-cross-border-exchange-of-digital-evidence/125117/" title="Permalink to Google Pleads for Better Cross-Border Exchange of Digital Evidence" rel="bookmark">Google Pleads for Better Cross-Border Exchange of Digital Evidence</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 21, 2017 , 10:30 am</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125216" class="home-left  post-125216 post type-post status-publish format-standard has-post-thumbnail hentry category-cloud-security category-privacy category-vulnerabilities tag-amazon-web tag-aws-s3 tag-consumer-data-leak tag-insecure-amazon-web-server tag-insecure-database tag-kromtech-security-research-center tag-social-security-numbrers hashtags-insecure-amazon-web-server hashtags-leaky-data">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/auto-lender-exposes-loan-data-for-up-to-1-million-applicants/125216/" title="Permalink to Auto Lender Exposes Loan Data For Up To 1 Million Applicants" rel="bookmark">Auto Lender Exposes Loan Data For Up To 1 Million Applicants</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 26, 2017 , 9:15 am</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125210" class="home-left  post-125210 post type-post status-publish format-standard has-post-thumbnail hentry category-vulnerabilities category-web-security tag-atlassian tag-data-breach tag-hipchat tag-password-resets tag-passwords tag-third-party-library">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/atlassian-resets-hipchat-passwords-following-breach/125210/" title="Permalink to Atlassian Resets HipChat Passwords Following Breach" rel="bookmark">Atlassian Resets HipChat Passwords Following Breach</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 25, 2017 , 3:34 pm</span>
+          </div>
+        </article><!-- #post -->
+              <article id="post-125028" class="home-left last post-125028 post type-post status-publish format-standard has-post-thumbnail hentry category-privacy category-web-security tag-account-recovery tag-application-development tag-application-security tag-authentication tag-brad-hill tag-documentation tag-f8-conference tag-facebook tag-facebook-delegated-account-recovery tag-java tag-nodejs tag-privacy tag-ruby tag-sdks">
+          <h4 class="entry-title">
+            <a href="https://threatpost.com/facebook-delegated-account-recovery-sdks-published-for-java-ruby-apps/125028/" title="Permalink to Facebook Delegated Account Recovery SDKs Published for Java, Ruby Apps" rel="bookmark">Facebook Delegated Account Recovery SDKs Published for Java, Ruby Apps</a>
+          </h4>
+          <div class="post-info">
+            <span class="date">April 18, 2017 , 1:45 pm</span>
+          </div>
+        </article><!-- #post -->
+      </div></aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><br>
+<a href="https://kas.pr/ww_mkto_econrep" target="_blank"><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/cost_TP.png" width="270" height="450" scale="0"></a>
+<br><br><br></div>
+		</aside>	</div><!-- #secondary -->
+
+					<div id="final-say" class="final-say-sidebar" role="complementary">
+				<h2 class="alignleft">The Final Say</h2> <span class="subtitle">From Kaspersky Blogs</span>
+				<div class="clear"></div>
+									<article class="final-say final-say-first">
+
+
+
+					<div class="featured-image-wrap">
+						<a href="https://eugene.kaspersky.com/2017/05/03/an-elevator-in-the-internet-vs-the-internet-in-an-elevator/">
+															<img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/icon_Eugene-230x230.png" class="final-say wp-post-image" width="180" height="180" alt="An Elevator in the Internet vs. the Internet in an..." scale="0">
+													</a>
+						<h4 class="entry-title"><a href="https://eugene.kaspersky.com/2017/05/03/an-elevator-in-the-internet-vs-the-internet-in-an-elevator/">An Elevator in the Internet vs. the Internet in an...</a></h4>
+					</div>
+
+					<p>I have a very high opinion of Schindler, the world’s leading manufacturer of elevators and escalators. (Next time you use these modes of transport, take note of the manufacturer’s logo.) I...</p>
+					<p class="read-more"><a href="https://eugene.kaspersky.com/2017/05/03/an-elevator-in-the-internet-vs-the-internet-in-an-elevator/" rel="bookmark" class="read-more" title="Permalink to An Elevator in the Internet vs. the Internet in an...">Read more…</a></p>
+
+					</article>
+											<article class="final-say final-say-first">
+
+
+
+					<div class="featured-image-wrap">
+						<a href="https://securelist.com/analysis/quarterly-spam-reports/78221/spam-and-phishing-in-q1-2017/">
+															<img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/icon_Securelist-230x230.png" class="final-say wp-post-image" width="180" height="180" alt="Spam and phishing in Q1 2017..." scale="0">
+													</a>
+						<h4 class="entry-title"><a href="https://securelist.com/analysis/quarterly-spam-reports/78221/spam-and-phishing-in-q1-2017/">Spam and phishing in Q1 2017...</a></h4>
+					</div>
+
+					<p>Although the beginning of Q1 2017 was marked by a decline in the amount of spam in overall global email traffic, in March the situation became more stable, and the average share of spam for the quarte...</p>
+					<p class="read-more"><a href="https://securelist.com/analysis/quarterly-spam-reports/78221/spam-and-phishing-in-q1-2017/" rel="bookmark" class="read-more" title="Permalink to Spam and phishing in Q1 2017...">Read more…</a></p>
+
+					</article>
+											<article class="final-say">
+
+
+
+					<div class="featured-image-wrap">
+						<a href="https://blog.kaspersky.com/kaspersky-add-exclusion/14765/">
+															<img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/icon_Daily-230x230.png" class="final-say wp-post-image" width="180" height="180" alt="What to do if your antivirus prevents a website fr..." scale="0">
+													</a>
+						<h4 class="entry-title"><a href="https://blog.kaspersky.com/kaspersky-add-exclusion/14765/">What to do if your antivirus prevents a website fr...</a></h4>
+					</div>
+
+					<p>If your antivirus prevents an app from running or won’t let you open a link, there’s no need to disable it: Here’s what to do....</p>
+					<p class="read-more"><a href="https://blog.kaspersky.com/kaspersky-add-exclusion/14765/" rel="bookmark" class="read-more" title="Permalink to What to do if your antivirus prevents a website fr...">Read more…</a></p>
+
+					</article>
+											<article class="final-say final-say-first">
+
+
+
+					<div class="featured-image-wrap">
+						<a href="https://business.kaspersky.com/targeted-attacks-trends/6776/">
+															<img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/icon_Business2-230x230.png" class="final-say wp-post-image" width="180" height="180" alt="Trends in targeted attacks" scale="0">
+													</a>
+						<h4 class="entry-title"><a href="https://business.kaspersky.com/targeted-attacks-trends/6776/">Trends in targeted attacks</a></h4>
+					</div>
+
+					<p>What you need to know to prevent financial and reputational losses.</p>
+					<p class="read-more"><a href="https://business.kaspersky.com/targeted-attacks-trends/6776/" rel="bookmark" class="read-more" title="Permalink to Trends in targeted attacks">Read more…</a></p>
+
+					</article>
+											<article class="final-say final-say-first">
+
+
+
+					<div class="featured-image-wrap">
+						<a href="https://academy.kaspersky.com/ic3-2016/">
+															<img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/icon_Academy1-230x230.png" class="final-say wp-post-image" width="180" height="180" alt="Kaspersky Academy attended MIT (IC)3 Annual Confer..." scale="0">
+													</a>
+						<h4 class="entry-title"><a href="https://academy.kaspersky.com/ic3-2016/">Kaspersky Academy attended MIT (IC)3 Annual Confer...</a></h4>
+					</div>
+
+					<p>72 guests, among them a global security lead Gordon Morrison, attended the MIT (IC)3 Annual Conference to share the latest insights into the industry. Educational programs manager Christel Gampig-Avil...</p>
+					<p class="read-more"><a href="https://academy.kaspersky.com/ic3-2016/" rel="bookmark" class="read-more" title="Permalink to Kaspersky Academy attended MIT (IC)3 Annual Confer...">Read more…</a></p>
+
+					</article>
+									</div><!-- #secondary -->
+		
+	</div><!-- #wrap -->
+</div><!-- #main .wrapper -->
+
+<footer id="footer">
+		<div id="footer-widgets" class="clear">
+		<div id="footer-left" class="alignleft">
+			<div class="company-info">
+				<a href="https://threatpost.com/" title="Threatpost | The first stop for security news" class="footer-logo">Threatpost | The first stop for security news</a>
+				<span class="subtitle">The Kaspersky Lab Security News Service</span>
+			</div><!-- .company-info -->
+
+			<div class="category-list">
+				<div class="categories"><span class="title">Categories</span><a href="https://threatpost.com/category/bh/" title="View all posts in Black Hat">Black Hat</a> | <a href="https://threatpost.com/category/cloud-security/" title="View all posts in Cloud Security">Cloud Security</a> | <a href="https://threatpost.com/category/critical-infrastructure/" title="View all posts in Critical Infrastructure">Critical Infrastructure</a> | <a href="https://threatpost.com/category/cryptography/" title="View all posts in Cryptography">Cryptography</a> | <a href="https://threatpost.com/category/featured/" title="View all posts in Featured">Featured</a> | <a href="https://threatpost.com/category/government/" title="View all posts in Government">Government</a> | <a href="https://threatpost.com/category/hacks/" title="View all posts in Hacks">Hacks</a> | <a href="https://threatpost.com/category/iot/" title="View all posts in IoT">IoT</a> | <a href="https://threatpost.com/category/malware-2/" title="View all posts in Malware">Malware</a> | <a href="https://threatpost.com/category/mobile-security/" title="View all posts in Mobile Security">Mobile Security</a> | <a href="https://threatpost.com/category/podcasts/" title="View all posts in Podcasts">Podcasts</a> | <a href="https://threatpost.com/category/privacy/" title="View all posts in Privacy">Privacy</a> | <a href="https://threatpost.com/category/sas/" title="View all posts in Security Analyst Summit">Security Analyst Summit</a> | <a href="https://threatpost.com/category/slideshow/" title="View all posts in Slideshow">Slideshow</a> | <a href="https://threatpost.com/category/uncategorized/" title="View all posts in Uncategorized">Uncategorized</a> | <a href="https://threatpost.com/category/videos/" title="View all posts in Videos">Videos</a> | <a href="https://threatpost.com/category/vulnerabilities/" title="View all posts in Vulnerabilities">Vulnerabilities</a> | <a href="https://threatpost.com/category/web-security/" title="View all posts in Web Security">Web Security</a></div>			</div><!-- .category-list -->
+
+			<div class="footer-menu">
+				<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="footer-nav"><li id="menu-item-86410" class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-86410"><a href="https://threatpost.com/rss-feeds/">RSS Feeds</a></li>
+<li id="menu-item-37426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37426"><a href="https://threatpost.com/">Home</a></li>
+<li id="menu-item-86470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-86470"><a href="https://threatpost.com/about-threatpost/">About Us</a></li>
+<li id="menu-item-86471" class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-86471"><a href="https://threatpost.com/contact-us/">Contact Us</a></li>
+</ul></div>			</div><!-- .footer-menu -->
+
+		</div><!-- #footer-left -->
+		<div id="footer-right" class="alignright">
+							<div id="footer-sidebar" class="widget-area" role="complementary">
+					<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Authors</h3>			<div class="textwidget"><p>
+<a href="https://threatpost.com/author/michael/">Michael Mimoso</a><br>
+<a href="https://threatpost.com/author/thomas/">Tom Spring</a><br>
+<a href="https://threatpost.com/author/christopher/">Christopher Brook</a><br>
+
+</p></div>
+		</aside>				</div><!-- #footer-sidebar -->
+					</div><!-- #footer-right -->
+	</div><!-- #footer-widgets -->
+	<div class="site-info-wrap">
+		<div class="site-info">
+			Copyright © 2017 <a href="https://threatpost.com/" title="Threatpost | The first stop for security news">Threatpost | The first stop for security news</a> <div class="menu-footer-sub-menu-container"><ul id="menu-footer-sub-menu" class="footer-sub"><li id="menu-item-86472" class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-86472"> | <a href="https://threatpost.com/kaspersky-lab-threatpost-terms-service/">Terms of Service</a></li>
+<li id="menu-item-86473" class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-86473"> | <a href="https://threatpost.com/privacy-policy/">Privacy</a></li>
+</ul></div>		</div><!-- .site-info -->
+	</div><!-- .site-info-wrap -->
+</footer><!-- #footer -->
+
+		<script async="" type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/plusone.js" gapi_processed="true"></script>
+
+<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('ntt0j', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=ntt0j&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" /&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=ntt0j&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" /&gt;
+</noscript>	<div style="display:none">
+	</div>
+            <script type="text/javascript">
+            if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                document.getElementById('comment').value =
+                    _recaptcha_wordpress_savedcomment;
+            }
+            </script><script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource(4)"></script>
+<script type="text/javascript" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/e-201718.js" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.8.2',blog:'52985383',post:'124006',tz:'-4',srv:'threatpost.com'} ]);
+	_stq.push([ 'clickTrackerInit', '52985383', '124006' ]);
+</script>
+
+
+<!-- Powered by Whitelist IP For Limit Login Attempts | URL: http://club.orbisius.com/products/wordpress-plugins/whitelist-ip-for-limit-login-attempts/ -->
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><img src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/g.gif" alt=":)" width="6" height="5" id="wpstats" scale="0"><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/saved_resource.html"></iframe><div style="background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); position: absolute; left: 0px; top: -10000px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.05;  filter: alpha(opacity=5)"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe src="./Google reCaptcha Bypass Technique Uses Google’s Own Tools _ Threatpost _ The first stop for security news_files/bframe.html" title="recaptcha challenge" frameborder="0" scrolling="no" name="a9lk4zuwh6je" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

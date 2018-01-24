@@ -1,0 +1,130 @@
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+/* specific styles for SAS2014 page */
+.sas2014 ul {
+	list-style: none !important;
+	padding: 0;
+	margin: 0;
+}
+
+.sas2014 li {
+	list-style: none !important;
+	padding-left: 2em !important;
+	text-indent: -.7em;
+}
+
+.sas2014 li:before {
+	content: "\002022   ";
+	color: #f31c28;
+	font-weight: bold;
+}
+
+a.sasNav {
+	float: left;
+	margin: 0 1px;
+	padding: 5px 16px;
+	background: #005a52;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: .9em;
+}
+
+a.sasButton {
+	margin: 0 1px;
+	padding: 5px 8px;
+	background: #f31c28;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+a.sasNav:hover {
+	opacity: .8;
+}
+
+a.sasNavOn {
+	background: #f31c28;
+}
+
+div.sasAnchorNav {
+	clear: both;
+	padding: 20px 0;
+	display: block;
+	border-top: 1px dashed #ccc;
+	margin-top: 20px;
+}
+
+div.sasAnchorNavFirst {
+	border-top: none;
+	margin-top: 0;
+}
+
+/* speakers */
+.sasSpeakers {
+	margin-top: 15px;
+}
+
+.sasSpeakerImg {
+	float: left;
+	margin-bottom: 15px;
+	width: 45%;
+}
+
+.sasSpeakerImg img {
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+}
+
+.sasSpeakerImg p {
+	padding-top: 40px;
+	font-size: .9em;
+}
+
+/* agenda updates */
+.sasAgendaBox {
+	margin: 10px;
+	padding: 10px;
+	background: #eee;
+	height: 7em;
+	width: 300px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}	
+}
+
+.sasAgendaLt, .sasAgendaRt {
+	float: left;
+	margin: 2px;
+}
+
+.sasAgendaRt {
+	font-style: italic;
+}
+
+.sasAgendaLt {
+	clear: left;
+	font-weight: bolder;
+	padding-right: 5px;
+}
+
+/*hiding for now*/
+#sasNavNewsCon, #sasNavPhotoCon, .sasNavPhotos, .sasNavNews {
+	display: none;
+}
+
+/* // specific styles for SAS2014 */
